@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syska Power Bank</title>
+<meta charset="UTF-8">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .product-card {
+      max-width: 300px;
+      margin: 20px auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      background: url('moto_g72.jpg') center/cover no-repeat;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .product-price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e44d26;
+    }
+
+    .buy-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #e44d26;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+ 
+        .product-details {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-card:hover .product-details {
+            display: block;
+        }
+   
+
+
+
+
+
+  </style>
+    
+</head>
+<body>
+    <div class="product-card">
+        <img class="product-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEhIVFhUVFRUVFRUVFRUVFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygvLisBCgoKDg0NFQ8PFSsZFRkrLSsrKysrKysrLSstNy0rLTc3Nys3LTcrLS03NysrKystKysrKysrKysrKysrKysrK//AABEIANsA5wMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAYHBQj/xABEEAACAQICBQgGBwUIAwAAAAAAAQIDEQQhBQYSMVEHEyJBYXGBkRQyQlKhsSNUgpOU0dJEYnKSwRUWU3OD4fDxJISy/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAGREBAQEAAwAAAAAAAAAAAAAAAAEREiFB/9oADAMBAAIRAxEAPwDuIAAAAAAAAAAAAAAABp+vGv8AhtHLZlerXavGjF2twdSW6C82+pHo666xwwGFniJWcvVpR96o09ldys2+xM+XNIY6piKs61WTlKcnKTe9tlG2ac5T9J4hvZrcxC7tCitmy6rzd5N9t14Hgy1gxz343FP/ANit+o85IrSAy/7axn1zE/iK36h/bOM+t4n8RW/UYtgVGYtNYz65ivxNb9RXHT+OW7G4r8RW/UYIIPShrPpBbsdifv6v6if706Q+vYn7+p+Z5hAHrf3r0j9exP31T8yf72aR+vYn76p+Z5ACvVlrRpB/tuJ+/qfqLctZMe/23FfiKv6jzgEZq1jxyzWNxX4it+o9XRfKdpShJP0l1V7tZKon4+t8TXJGDW3hX07ye6+0tJxlHY5utTipThe8Wm7bUH1q/U911vBxfkpx0sPjY1s9lQnCXapRbt5qHkQMH04ACAAAAAAAAAAABDZJofK3rX6FhXSg/pq6lGPGELWnPv6l2u/UBynlb1t9NxXN05XoUW407bpPLbqdt2suxLiaVTiURV3cvxRUSkSCSj0NXsPCpiaMKsXKk6kFVs5K0JSUZTvHNKO1e/YepT0PQWKpYN7U9hSjiq0JK0ZtO8l7KhS6O0+tqfVY1olSe5de+3Wr3+aXkgNiloKjCvTozrJr0ZVpzhK0JVZbUoQhUlG1ODi6XTkmr34otS1fbqYmKjUhHD06kpKo4TlzsKbnzW1DozbtJ3j7MW7ZHkYfGVactunUnCVrbUJyjK261092Sy7EVUMdUjKLVWorSlK6k7pzWzUkr+045N9fXkBly0Slh1XVXabt0IQU1GUpuMadSantQqNRbScLPLNs9XSWo2Jw+DeNrTpQtKEeZcnzyc7WTjaylZ7Tje6WeW43nD6R0XTpx9BxOHjOMY83LGzqRVKUU9mXNunaUo7Ts3JqN3bJ5+ZrnonErQ9N4icZzw+JlPnYT24YinipOSqxll0tqdrW3X4og5gSQGUAwUTkBRUmYu9ldaZkaKw23NLq3vw3Ab9yd6CdarTo59JSlNrqSi8/5tleIOhckGi7Qq4pr1rUofwxzm12N2X2QS1Y6MACAAAAAAAAAAGBZxmJjShKpOWzGEZSk3uUYq7Z8ta96xSx+LnXd1HKMIv2YR9VfN97Z1Plv1r5uksBTl0p2lVt1Q3xh4732JcTh1NdZYK4RLqIiioqAJAEWAYsAIBAEmdW0xiJ0YYWVabowd4Ur9CLze7r3vfxMAkAGwUsCmUizUkVTZYnICh5s2bVnBt5pXlOSjBcW8orz+ZruHp7TS4u3mdk5J9Cc5iVNroYeO32c5LKmv8A6f2QOuaE0dHD0KdCO6nBRvxftS8Xd+JJnAyoAAAAAAAAAAB52n9LQwmHqYio+jCLdvee6MV2ttI9Bs4by26187UWBpPoUneo111M1b7O7vbA5xrBpSpi8RUr1HeU5N9nYl2JZeBixiUU11l5I0iULkEgBcEASQhcAGQyQBBIAApkVFE2BZqMxpl6pItQ3kHr6v4W89p7o/N7z6P5N9E8xg4ykrTrPnZcUpJKC/lSfe2cb1C0Jz9WjQaynLaqfwLpT+Ca72j6OgrKxaKgAZUAAAAAAAAAKZSA1/XvWKOBws63ttbNNfvtb+5bz5dxFZ1Jucndtttvibryr61em4nYg70qV4w4P3pePysaTFFgqiVkRRUVFIJFgIBIAgAACSAAADAMs1GXWY9VgWKjMvRWH25xXi+5f7/Iwkrs2bV3CO20k25NKKW99SS7fzA7JyQaItGpi5Lf9FT7o2c34vZX2WdJsebq5o1YbDUsOvYglJrrm85vxk2z0jNUAAAAAAAAAAA0Dla1pWEwzoQl9LWTWW+MNzfju8zd8fjIUac6tR2hCLlJ9iXzPlzXXWCeOxU60tzdorqjFZJIDw27u7LkUUxRdijSJFiUQAYQIAAgALi4FwABIEBoMgCmbMWrIv1ZGLNgXMNTbdlvbt/zwOvclWhlUxUG49ChHnHw291Nd925fYOa6Bw95Xe6K+L3n0TyY6J5nBqo10675x9kd1NeWf22PBt6RIBlQAAAAAAAAMHj62adhgsNPES3pWgvem/VXd1vsTA5vy262WXoFN8JVWuO+MPDJ+K4HGILrMnSmNniK06s3eU5OTb623ctJFExRcIRJUQRckWAgglkALAAAAAAQJAhkSJRRUYFiqy1TV3cmqzL0ZQ2pJeL8P8Af5AbfqboV1qlLDrfUktprqj6034JPyPpGhSUIxhFWjFKKXBJWSOZcj2i86uKaySVGHjaVRryh8TqKJVAAQAAAAAAAAQz595YdbPSa/o9OX0VFtZbpT3Sl28F2LtOp8pms6wOFey7Vat4U+MVbpT8L272j5qlJyk2ywKcS7YhIqRUAhYmwEAmwsBSyCpgCkFRAEEkgCATYgAWKrL0jGrSAs72bDoGhk523u0ePBHhYendpcXbz3nU+TXQnP4ulFroUfpZ8Oi+gn3yt4Jgdj1W0UsLhaVDrjFOfbOXSm/NvwsesQkSZUAAAAAAAALderGEXOTsoptt9SSu2XGcx5Z9auZo+h0306qvUfCHVHxt5LtA5fyiayyx2KlP2I9GmuEVu8et9rZrUFYpjm7lyKNIlImxUkLARYqQSJAiwJIYFJBVYAQQVCwFIJsLAQwSQwKJGHVd2ZVd2RiU1dgetoTD3ld7o/PrO/8AJLovm8K67XSrzuv8uHRj8dt+KON6s6MlUlToR9arOMb8Np5vwPpjCYaNOEacFaMIqMVwUVZfIVV4AGQAAAAAACGwPP09pWGFoVMRU9WCvbi3lGK720j5d1j0vUxeInXqO7k79ncuxHQuWvWrnKnoNKXQpu9S3tVOH2Vl33OX0oFgRiVpFSRKRUQEVJACkE2AEEgARYAmwEWFiQBAAAhkEkVHZAYeIkX9HUNqSXi+4xrXZ7uhqNk5sQdR5I9D7deeJkujRjsQ/wAyaza7o3/mR1417UTRXo2CpQatOS5yfHannZ9qWyvA2ElUABAAAAAADXtetYVgcLOtltvo00/ffXbrsrvyXWbA2fOnKvrR6ZinTg/oqV4Q4Ozzl4tfBcANNxFaVWpKcm22223m8+LKkimlGxcSNIE2BKAJEWKrE2AosRYztHY1UXKXNUqm1TlBKrDbUXK3Tir5TVsn2stYCtGnUhOdONWMWm6cm1GaXU2s7AY1gXq01KbkoqKcnLYi3aKbvsxbvktxc0hVpzqSlSpc1B22ae3Kps2ST6cs3dpvxsBiixlYyVJ7HNQnG0Ep7c1Paqe1KNorZjwWe4xgIBIAgWJIYEWMfEyMl7jBqu7AnDQuzoeoehlXxVCg1eKfOVP4YLas+92XiaLhHstO180lwu+vyTO7cjeirUp42SzqPm4dkYPptd8lb7AV0dEgGQAAAAAAABovKxrR6Hheag7Va6cYtezBevL428XwPneKu7m48qmlpYjFylfoxcoQXUowdvjm/E1bBQuzUEqBVsmW4JFtoIs7JNi4yhsCLCxO0RtFEEWK7oi6IKWiLFYKKBYrJUSC0SXdgp2ALYsXdgpnkBj4mdjGoRvmK8rsycJQ3LiwL+Cw0pVIU4K8nKMYrLpVJtJLud4o+qdCaPWHoUsPHdTpxhfi0s5eLu/E45yVaA53H8+4/R4eO331ZLYprwW3LvijuJKoACAAAAAAAAD5m160fLDYutRrRbg6tSdOaXs1JOaXgpW8DwqCjf6Pam+CyS72zvvKXoLnaarxjtbK2Zq1+j1S8M/M466Sg2krZmolYPN1berHuu/6Ityp1Pdj5so05iKkNmcJNLc1ZWvv/MxqWn5yaUqdGzsruM8lxb2+0toyuaqe6vMh4efufFCvplxklCnSaazacmr55XUuFvMrw+lnLajJQg1a1211573/AMuibDKt8xP3fiiOZl7r+B6VOrtJSTyaTXiU4iu4RcrN2V7LeVHnOlL3JEc0/dl5GThdITqK8KMmtztKOTy495kSqVErujNJZt9F2S39ZNivO2P3ZeQS4xl/Keop3VyxjsS6cHNRvbet2XEoxLLhLyHR7fIop6eptdOE0+vZ2Wvi0eni5U6UIVJyn03bZUVtLJ79y6uq5NR5zqR4lPOLiejTx1GTjBOd3ZK8F1u2dmK1CnNuLTvbfudrtX+AV5VTEWMSpVcj03ouyb22+Ca/rctqlb/oDDpYf2peC62Z2Di3JN/9FtQN85M9TpYypz1RNYenLN/4kl7C7OL8AOn8m+hvR8IpSVp1nzkr70mrQXln3yZthEUSZUAAAAAAAAAAESVzT9N8nWExDco7VGTzvDON+2D+SsbiAOC6zcnWLpJpU3Xp3up0ruWW7ap+sn3XXaaZPV1x306seN4SXzR9WWFi6Pk6Wilkm5Zbrpf1QeAjmudee/OOdvA+sHFcCHTjwXkhqPlzCxUY7O1e3ai82fTU8LTe+EX3xTLMtFYd76FL7uH5F5GPliONnNXjST3x9eG1lb2Xn1rsZVTlUaf/AI8muzZfX2HeNN8n+jJT2/RIJu7exKdNXbz6MJJGq6a1H0fBNxw9sv8AEqv5yA55RqyeUqcoPhJWuuKLlSN00+s3zULVPBVMQ1Ogmkt21O3ilLPxOjvUrR/1Sl5P8xo+X1oSa9qL7728VZmRPAVJRUXZtPe5y3cEmsj6TnqJo1/ssPCU18pHnYrUPRy3Ye3+rW/WTocEp4SW3GTjlFezNxltJtpppdWXkX8Nzl3KpHak7LbcnJqKvlm92fA61jdUMFHdRf3lV/OZrWJ0PQi8odfvT/MSQ1qlrlmlgKlWap0oSnN7oxTk34I63qvqjgqlnOjtf6lW3kpWN+0foyjQWzRpQpr9yKjfva3+JbSRy3VLknbcauOlZb+Yg832VKi3d0fM6xhcPGnFQhFRjFJRjFWSS3JJbi7YkyoAAAAAAAAAAAAA/9k=" alt="Syska Power Bank">
+        <div class="product-details">
+            <h2>Syska Power Bank</h2>
+            <p>Capacity: 10000mAh</p>
+            <p>Output: 5V/2.1A</p>
+            <p>Input: 5V/2A</p>
+            <p>Features: Fast Charging, LED Indicator, Compact Design</p>
+            
+<div class="product-price">$299.99</div>
+    <a href="#" class="buy-button">Buy Now</a>
+        </div>
+    </div>
+</body>
+</html>
